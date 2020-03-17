@@ -1,4 +1,4 @@
-package com.parsing.marketobserverserver.entity
+package com.parsing.marketobserverserver.database.entity
 
 import javax.persistence.*
 
