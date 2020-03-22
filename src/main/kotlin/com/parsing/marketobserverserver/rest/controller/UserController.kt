@@ -1,7 +1,8 @@
 package com.parsing.marketobserverserver.rest.controller
 
-import com.parsing.marketobserverserver.database.entity.User
+import com.parsing.marketobserverserver.database.entity.UserEntity
 import com.parsing.marketobserverserver.database.repository.UserRepository
+import com.parsing.marketobserverserver.rest.dto.UserDto
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -12,9 +13,9 @@ class UserController(private val userRepository: UserRepository) {
     fun getUser() = "user"
 
     @PostMapping("/login")
-    fun login(@RequestBody user: User): Int {
-        val dbUser = userRepository.findByEmail(user.email)
-        return if (dbUser.email == user.email && dbUser.password == user.password) {
+    fun login(@RequestBody userDto: UserDto): Int {
+        val dbUser = userRepository.findByEmail(userDto.email)
+        return if (dbUser.email == userDto.email && dbUser.password == userDto.password) {
             200
         } else {
             300
@@ -22,8 +23,8 @@ class UserController(private val userRepository: UserRepository) {
     }
 
     @PostMapping("/registerUser")
-    fun registerUser(@RequestBody user: User): Int {
-        userRepository.save(user)
+    fun registerUser(@RequestBody userDto: UserDto): Int {
+        userRepository.save(UserEntity.fromDto(userDto))
         return 200
     }
 }

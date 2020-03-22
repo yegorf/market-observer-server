@@ -9,9 +9,12 @@ data class Query(
         @GeneratedValue(strategy = GenerationType.AUTO)
         var id: Long,
 
-        @Column(name = "creation_time")
-        var creationTime: String,
+        @Column(name = "value")
+        var value: String,
+
+        @Column(name = "timestamp")
+        var timestamp: Long,
 
         @ManyToOne
-        var user: User
+        var user: UserEntity
 )
