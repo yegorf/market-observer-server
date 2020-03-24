@@ -3,17 +3,17 @@ package com.parsing.marketobserverserver.database.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "query")
-data class Query(
+@Table(name = "link")
+data class LinkEntity(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         var id: Long,
 
-        @Column(name = "value")
+        @Column(name = "link")
         var value: String,
 
-        @Column(name = "timestamp")
-        var timestamp: Long,
+        @Column(name = "time")
+        var time: String,
 
         @ManyToOne
         var user: UserEntity

@@ -2,7 +2,7 @@ package com.parsing.marketobserverserver.rest.controller
 
 import com.parsing.marketobserverserver.database.entity.UserEntity
 import com.parsing.marketobserverserver.database.repository.UserRepository
-import com.parsing.marketobserverserver.rest.dto.UserDto
+import com.parsing.marketobserverserver.rest.dto.request.UserDto
 import org.springframework.web.bind.annotation.*
 
 @RestController

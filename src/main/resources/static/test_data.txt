@@ -1,0 +1,10 @@
+query
+INSERT INTO `market_observer`.`query` (`id`, `user_id`, `timestamp`, `value`) VALUES ('1', '1', '01.01.2020', 'link1');
+INSERT INTO `market_observer`.`query` (`id`, `user_id`, `timestamp`, `value`) VALUES ('2', '1', '02.01.2020', 'link2');
+INSERT INTO `market_observer`.`query` (`id`, `user_id`, `timestamp`, `value`) VALUES ('3', '1', '03.01.2020', 'link3');
+INSERT INTO `market_observer`.`query` (`id`, `user_id`, `timestamp`, `value`) VALUES ('4', '1', '04.01.2020', 'link4');
+INSERT INTO `market_observer`.`query` (`id`, `user_id`, `timestamp`, `value`) VALUES ('5', '1', '05.01.2020', 'link5');
+
+advert
+
+

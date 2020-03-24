@@ -3,8 +3,8 @@ package com.parsing.marketobserverserver.database.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "advert")
-data class Advert(
+@Table(name = "result")
+data class ResultEntity(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         var id: Long,
@@ -19,5 +19,5 @@ data class Advert(
         var imageUrl: String,
 
         @ManyToOne
-        var query: Query
+        var query: LinkEntity
 )

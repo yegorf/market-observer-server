@@ -1,6 +1,6 @@
 package com.parsing.marketobserverserver.database.entity
 
-import com.parsing.marketobserverserver.rest.dto.UserDto
+import com.parsing.marketobserverserver.rest.dto.request.UserDto
 import javax.persistence.*
 
 @Entity
